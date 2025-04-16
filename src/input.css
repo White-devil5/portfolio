@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --color-theme-dark: #11001f;
+  --color-light: #fcf4ff;
+  --color-dark: #2a004a;
+  --font-outfit: "Outfit", sans-serif;
+  --font-ove: "Ovo", serif;
+  --shadow-black: 4px 4px 0 #000;
+  --shadow-white: 0px 1px 1px #fff;
+}
+
+@layer utilities {
+  .grid-cols-auto {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
